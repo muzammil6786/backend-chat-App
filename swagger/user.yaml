@@ -1,0 +1,132 @@
+openapi: 3.0.0
+info:
+  title: User API Docs
+  version: 1.0.0
+  description: Endpoints available to users.
+
+servers:
+  - url: http://localhost:5000/api
+
+paths:
+  /user/signup:
+    post:
+      summary: User sign up
+      tags: [Auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SignupRequest"
+      responses:
+        "200":
+          description: Signed up successfully
+
+  paths:
+  /user/verify/{token}:
+    get:
+      summary: Verify user email
+      description: Verifies a user's email using the provided token.
+      tags:
+        - User
+      parameters:
+        - in: path
+          name: token
+          required: true
+          schema:
+            type: string
+          description: JWT email verification token sent via email
+      responses:
+        '200':
+          description: Email verified successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Email verified successfully
+        '400':
+          description: Invalid or missing token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: No token provided
+        '404':
+          description: User not found
+        '500':
+          description: Internal server error
+
+  /create:
+    post:
+      summary: Create a group
+      tags: [Group]
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateGroupRequest"
+      responses:
+        "200":
+          description: Group created
+
+  /join:
+    post:
+      summary: Join a group
+      tags: [Group]
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/JoinGroupRequest"
+      responses:
+        "200":
+          description: Group joined
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    SignupRequest:
+      type: object
+      required: [name, firstName, email, password, country]
+      properties:
+        name:
+          type: string
+        firstName:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        country:
+          type: string
+
+    CreateGroupRequest:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+
+    JoinGroupRequest:
+      type: object
+      required: [groupId]
+      properties:
+        groupId:
+          type: string

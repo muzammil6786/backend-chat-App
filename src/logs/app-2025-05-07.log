@@ -1,0 +1,96 @@
+{"level":"info","message":"Server running on port 5000"}
+{"level":"error","message":"DB connection error: MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"error","message":"DB connection error: MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"error","message":"DB connection error: MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"error","message":"DB connection error: MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"error","message":"DB connection error: MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"error","message":"DB connection error: MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server running on port 5000"}
+{"level":"info","message":"MongoDB connected"}

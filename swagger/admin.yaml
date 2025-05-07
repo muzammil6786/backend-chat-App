@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: Admin API Docs
+  version: 1.0.0
+  description: Endpoints accessible to admin users only.
+
+servers:
+  - url: http://localhost:5000/api
+
+paths:
+  /admin/create:
+    post:
+      summary: Create new admin user
+      tags: [Admin]
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateAdminRequest"
+      responses:
+        "201":
+          description: Admin created
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    CreateAdminRequest:
+      type: object
+      required: [name, firstName, email, password]
+      properties:
+        name:
+          type: string
+        firstName:
+          type: string
+        email:
+          type: string
+        password:
+          type: string

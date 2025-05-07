@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat UI (Email Based)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        input,
+        button {
+            padding: 0.5rem;
+            margin: 0.3rem;
+        }
+
+        .messages {
+            margin-top: 1rem;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            height: 200px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Chat Application</h2>
+
+    <label>Your Email: <input id="userEmail" /></label><br />
+    <label>Receiver Email: <input id="receiverEmail" /></label><br />
+    <label>Message: <input id="privateMessage" /></label>
+    <button onclick="sendPrivateMessage()">Send Private Message</button>
+    <br /><br />
+
+    <label>Group Name: <input id="groupId" /></label><br />
+    <label>Group Message: <input id="groupMessage" /></label>
+    <button onclick="joinGroup()">Join Group</button>
+    <button onclick="sendGroupMessage()">Send Group Message</button>
+
+    <div class="messages" id="messageBox"></div>
+
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script>
+        let socket;
+
+        function connectSocket() {
+            const userEmail = document.getElementById("userEmail").value;
+            socket = io("http://localhost:5000", {
+                query: { email: userEmail }
+            });
+
+            socket.on("connect", () => {
+                console.log("Connected to socket.io server");
+                appendMessage("Connected as: " + userEmail);
+            });
+
+            socket.on("receiveMessage", (data) => {
+                appendMessage("Message received: " + JSON.stringify(data));
+            });
+        }
+
+        function sendPrivateMessage() {
+            const to = document.getElementById("receiverEmail").value;
+            const message = document.getElementById("privateMessage").value;
+            socket.emit("privateMessage", { to, message });
+            appendMessage(`Sent to ${to}: ${message}`);
+        }
+
+        function joinGroup() {
+            const groupId = document.getElementById("groupId").value;
+            socket.emit("joinGroup", groupId);
+            appendMessage("Joined group: " + groupId);
+        }
+
+        function sendGroupMessage() {
+            const groupId = document.getElementById("groupId").value;
+            const message = document.getElementById("groupMessage").value;
+            const userEmail = document.getElementById("userEmail").value;
+            socket.emit("groupMessage", { groupId, message });
+            appendMessage(`${userEmail} Sent to group ${groupId}: ${message}`);
+        }
+
+        function appendMessage(msg) {
+            const box = document.getElementById("messageBox");
+            const div = document.createElement("div");
+            div.textContent = msg;
+            box.appendChild(div);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        document.getElementById("userEmail").addEventListener("change", connectSocket);
+    </script>
+</body>
+
+</html>
